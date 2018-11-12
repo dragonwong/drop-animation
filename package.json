@@ -1,0 +1,26 @@
+{
+  "name": "drop-animation",
+  "version": "0.0.2",
+  "description": "浏览器中的掉落动画",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonwong/drop-animation.git"
+  },
+  "keywords": [
+    "drop",
+    "animation",
+    "购物车",
+    "掉落",
+    "动画"
+  ],
+  "author": "wangdagen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dragonwong/drop-animation/issues"
+  },
+  "homepage": "https://github.com/dragonwong/drop-animation#readme"
+}

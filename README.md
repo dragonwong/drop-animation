@@ -17,7 +17,7 @@ npm install drop-animation
 ```js
 import Dropper from 'drop-animation';
 
-// 新建日志方法实例
+// 新建实例
 new Dropper({
   element: '<div class="dropper"></div>',
   startPosition: {

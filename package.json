@@ -1,6 +1,6 @@
 {
   "name": "drop-animation",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "浏览器中的掉落动画",
   "main": "index.js",
   "scripts": {

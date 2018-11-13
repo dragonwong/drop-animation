@@ -35,8 +35,8 @@ class App extends React.PureComponent {
 
   onClick = e => {
     const {
-      x,
-      y,
+      left: x,
+      top: y,
       width,
       height,
     } = e.target.getBoundingClientRect();
@@ -61,8 +61,8 @@ class App extends React.PureComponent {
   }
   getCart = el => {
     const {
-      x,
-      y,
+      left: x,
+      top: y,
       width,
       height,
     } = el.getBoundingClientRect();

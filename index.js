@@ -92,7 +92,7 @@ class Dropper {
     }
 
     newElement.style.position = 'fixed';
-    this.props.container.append(newElement);
+    this.props.container.appendChild(newElement);
 
     return newElement;
   }
@@ -150,7 +150,7 @@ class Dropper {
       startTS: this.startDropTS,
     });
 
-    requestAnimationFrame(this.renderDropAnimation);
+    window.requestAnimationFrame(this.renderDropAnimation);
   }
   // 渲染掉落动画
   renderDropAnimation() {
@@ -199,7 +199,7 @@ class Dropper {
       duration: this.props.endAnimationDuration,
       startTS: nowTS,
     });
-    requestAnimationFrame(this.renderEndAnimation);
+    window.requestAnimationFrame(this.renderEndAnimation);
   }
   // 渲染回弹动画
   renderEndAnimation() {

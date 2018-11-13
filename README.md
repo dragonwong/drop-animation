@@ -18,16 +18,18 @@ npm install drop-animation
 import Dropper from 'drop-animation';
 
 // 新建实例
-new Dropper({
-  element: '<div class="dropper"></div>',
-  startPosition: {
-    x: x + width / 2,
-    y: y + height / 2,
-  },
-  endPosition,
-  width,
-  height,
-});
+function onClick() {
+  new Dropper({
+    element: '<div class="dropper"></div>',
+    startPosition: {
+      x: x + width / 2,
+      y: y + height / 2,
+    },
+    endPosition,
+    width,
+    height,
+  });
+}
 ```
 
 ## Document

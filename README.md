@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm install drop-animation
+npm install drop-animation --save
 ```
 
 ## Start

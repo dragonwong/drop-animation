@@ -1,4 +1,4 @@
-const NAME = 'DROP_ANIMATION'
+const NAME = 'DROP_ANIMATION';
 const NOOP = () => {};
 
 const type = {
@@ -41,10 +41,15 @@ const type = {
 };
 
 function calculator({
+  // 初始值
   from,
+  // 结束值
   to,
+  // 耗时
   duration,
+  // 开始时间戳
   startTS,
+  // 缓动函数，默认为斜率为1的linear（线性函数）
   easing = t => t,
 }) {
   return nowTS => {
@@ -104,14 +109,19 @@ class Dropper {
     if (dy > 0) {
       const k = this.props.jumpHeight / dy;
       b = -Math.sqrt((4 * k * k) + (4 * k)) - (2 * k);
-    } else {
+      a = 1 - b;
+    } else if (dy < 0) {
       const k = (this.props.jumpHeight / dy) - 1;
       b = Math.sqrt((4 * k * k) + (4 * k)) - (2 * k);
+      a = 1 - b;
+    } else {
+      a = -4;
+      b = 4;
     }
-    a = 1 - b;
     return {
       a,
       b,
+      dy,
     };
   }
   // 开始掉落动画
@@ -122,6 +132,7 @@ class Dropper {
     const {
       a,
       b,
+      dy,
     } = this.getAB();
 
     this.getDropX = calculator({
@@ -132,7 +143,7 @@ class Dropper {
     });
     this.getDropY = calculator({
       from: this.startPosition.y,
-      to: this.endPosition.y,
+      to: dy === 0 ? this.endPosition.y - this.props.jumpHeight : this.endPosition.y,
       duration: this.props.duration,
       startTS: this.startDropTS,
       easing: t => (a * t * t) + (b * t),

@@ -1,6 +1,6 @@
 # drop-animation
 
-> 购物车掉落动画是电商的灵魂。—— 鲁迅
+[![npm](https://img.shields.io/npm/v/drop-animation.svg?maxAge=60)](https://www.npmjs.com/package/drop-animation) [![npm](https://img.shields.io/npm/dt/drop-animation.svg?maxAge=60)](https://www.npmjs.com/package/drop-animation)
 
 浏览器中的掉落动画 🎾
 
@@ -38,7 +38,7 @@ function onClick() {
 
 参数 Object opts:
 
-| 属性 | 类型 | 是否必填 | 默认值 | 说明 |
+| 属性 | 类型 | 是否必填 | 默认值 | 说明 |
 | :-: | :-: | :-: | :-: | :-: |
 | element | `Element` \| `String` | 是 | - | 掉落元素
 | container | `Element` | 否 | `document.body` | 父级容器
